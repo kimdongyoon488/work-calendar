@@ -1,0 +1,123 @@
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+
+.modal-panel {
+    width: min(640px, calc(100vw - 40px));
+    background: #1e1f22;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    padding: 16px 18px 18px;
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.modal-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+.modal-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    background: #2b2d31;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-row label {
+    font-size: 13px;
+    color: #cfd3dc;
+}
+.form-row input,
+.form-row textarea {
+    background: #2b2d31;
+    border: 1px solid #3a3d44;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 6px;
+}
+.btn-primary,
+.btn-secondary {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+.btn-primary { background: #4e8cff; color: #fff; }
+.btn-primary:hover { background: #3c74d1; }
+.btn-secondary { background: #3a3d44; color: #fff; }
+.btn-secondary:hover { background: #32343a; }
+
+
+
+.task-card {
+    background: #dcdfe6;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    padding: 6px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #111827;
+}
+
+.task-card:hover {
+    background: #e0e7ff;
+    border-color: #c7d2fe;
+}
+
+
+.task-card .task-title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.task-card .task-meta {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #4b5563;
+    line-height: 1.2;
+}

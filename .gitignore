@@ -1,0 +1,19 @@
+# IntelliJ / OS
+.idea/
+*.iml
+
+# Backend (Spring)
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+
+# Frontend (React/Vite 등)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# env & logs
+*.log
+.env
+.env.*

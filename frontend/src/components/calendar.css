@@ -1,0 +1,186 @@
+.page-wrap {
+    min-height: 100vh;
+    background: #1f1f1f;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 36px 16px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.page-title {
+    margin: 0;
+    font-size: 42px;
+}
+.ym-controls select {
+    appearance: none;
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* 캘린더 박스 */
+.react-calendar {
+    width: 100%;
+    max-width: 1280px;
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+    margin: 0 auto;
+}
+
+.react-calendar__tile--now {
+    background: transparent !important;
+    box-shadow: inset 0 0 0 2px #4e8cff;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+    background: rgba(78, 140, 255, 0.08) !important;
+}
+
+.react-calendar__tile {
+    height: 160px;
+    vertical-align: top;
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.react-calendar__month-view__days__day abbr {
+    display: inline-block;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 4px;
+}
+
+.react-calendar__month-view__weekdays__weekday:nth-child(6) abbr,
+.react-calendar__month-view__weekdays__weekday:nth-child(7) abbr {
+    color: #d11;
+}
+.react-calendar__month-view__days__day--weekend abbr {
+    color: #d11;
+}
+
+
+.cell-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 4px;
+}
+
+/* 업무카드 스크롤 제어 */
+:root{
+    --task-visible-rows: 3;
+    --task-card-h: 28px;
+    --task-gap: 4px;
+}
+
+.task-list {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--task-gap);
+    padding-right: 2px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(
+            var(--task-visible-rows) * var(--task-card-h)
+            + (var(--task-visible-rows) - 1) * var(--task-gap)
+    );
+}
+
+.task-card {
+    flex: 0 0 auto;
+    background: #f2f2f7;
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: var(--task-card-h);
+}
+.task-card:hover { background: #e9eefb; }
+
+
+.add-fab {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #4e8cff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.add-fab:hover { background: #3c74d1; }
+.add-fab:focus {
+    outline: 2px solid #cbd9ff;
+    outline-offset: 2px;
+}
+
+.selected-date { margin-top: 16px; }
+
+
+body { display: block !important; }
+
+
+#root {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrap {
+    width: min(1200px, calc(100vw - 32px));
+    margin: 0 auto;
+}
+
+
+.react-calendar__tile--active,
+.react-calendar__tile--hasActive,
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus,
+.react-calendar__tile:enabled:focus,
+.react-calendar__tile:focus,
+.react-calendar__tile:focus-visible,
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd,
+.react-calendar__tile--rangeBothEnds {
+    background: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
